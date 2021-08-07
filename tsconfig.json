@@ -1,0 +1,66 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "types": [
+            "vite/client",
+            "@types/node",
+            "@types/ziggy-js"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "resources/*"
+            ],
+            "@assets/*": [
+                "resources/assets/*"
+            ],
+            "@images/*": [
+                "resources/assets/images/*"
+            ],
+            "@css/*": [
+                "resources/assets/css/*"
+            ],
+            "@scss/*": [
+                "resources/assets/scss/*"
+            ],
+            "@js/*": [
+                "resources/assets/js/*"
+            ],
+            "@ts/*": [
+                "resources/assets/ts/*"
+            ],
+            "@pages/*": [
+                "resources/assets/vue/pages/*"
+            ],
+            "@layouts/*": [
+                "resources/assets/vue/layouts/*"
+            ],
+            "@components/*": [
+                "resources/assets/vue/components/*"
+            ]
+        }
+    },
+    "include": [
+        "*.js",
+        ".*.js",
+        "*.ts",
+        "resources/**/*.js",
+        "resources/**/*.ts",
+        "resources/**/*.vue",
+    ],
+    "exclude": [
+        "node_modules",
+        "public",
+    ]
+}

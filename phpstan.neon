@@ -1,0 +1,25 @@
+# vendor\bin\phpstan analyse --memory-limit=2G -c phpstan.neon
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    ignoreErrors:
+        # - '#Comparison operation ">" between int<min, 60>#'
+    paths:
+        - app
+
+    # The level 8 is the highest level
+    level: 8
+
+    excludePaths:
+        - ./*/*/FileToBeExcluded.php
+        - ./app/Http/Middleware/ThrottleRequestsMiddleware.php
+        - ./app/Http/Middleware/AdminPermissions.php
+        - ./app/Notifications/Auth/UserVerificationNotification.php
+        - ./app/Console/Commands/Module/*
+
+    checkMissingIterableValueType: false
+
+    editorUrl: 'phpstorm:\\open?file=%%file%%&line=%%line%%'
+
+    tmpDir: phpstan/tmp
